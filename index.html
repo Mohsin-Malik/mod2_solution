@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+        
+		* {
+			box-sizing: border-box;
+		}
+        h2 {
+        text-align: center;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin: 60px;
+      }
+    
+		body {
+			margin: 40px;
+			font-family: Arial, sans-serif;
+		}
+
+		.section {
+            border: 5px solid white;
+			padding: 30px;
+			margin-bottom: 20px;
+		}
+
+		.section-title {
+			position: relative;
+			top: 0;
+			right: 0;
+			background-color: #E91E63;
+			color: white;
+			padding: 5px 10px;
+			border-bottom-left-radius: 5px;
+		}
+
+		/* Desktop View: 992px and above */
+		@media (min-width: 992px) {
+			.row {
+				display: flex;
+			}
+			.section {
+				width: 33.33%;
+				float: left;
+                background-color:blueviolet;
+			}
+		}
+
+		/* Tablet View: 768px to 991px */
+		@media (min-width: 768px) and (max-width: 991px) {
+			.section {
+				width: 50%;
+				float: left;
+                background-color:blueviolet;
+			}
+			.section:nth-child(3) {
+				clear: both;
+				width: 100%;
+               background-color:blueviolet;
+			}
+		}
+
+		/* Mobile View: 767px and below */
+		@media (max-width: 767px) {
+			.section {
+				width: 100%;
+				float: none;
+                background-color:blueviolet;
+			}
+		}
+	</style>
+</head>
+<body>
+    <h2>our menu</h2>
+	<div class="row">
+		<div class="section">
+			<div class="section-title">Chicken</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+		<div class="section">
+			<div class="section-title">Beef</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+		<div class="section">
+			<div class="section-title">Sushi</div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		</div>
+	</div>
+</body>
+</html>
